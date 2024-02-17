@@ -286,15 +286,22 @@ body {
         width: 100%;
         justify-content: center;
         padding: 20px;
+        background-color: #212121;
     }
 
     .box_lista {
         margin: 0;
         border: none;
+        width: 100%;
     }
     
+    #box_formulario {
+        width: 80%;
+    }
+
     .box_formulario_div {
         padding: 10px;
+        width: 100%;
     }
 
     .bt_editar:hover {
