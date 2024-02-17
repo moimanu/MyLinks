@@ -286,6 +286,28 @@ body {
 
     /*BOX FORMULARIO FIM*/
 
+    /*SOBRE*/
+
+        .subtitulo_sobre {
+            display: flex; 
+            flex-direction: row; 
+            text-align: center; 
+            align-items: center; 
+            justify-content: space-between;
+        }
+
+        .link_portifolio {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .link_portifolio:hover {
+            filter: opacity(70%);
+        }
+
+    /*SOBRE*/
+
 /*LISTA FIM*/
 
 @media screen and (max-width: 830px) {
@@ -343,14 +365,9 @@ body {
         cursor: pointer;
         filter: opacity(1);
     }
-}
 
-.link_portifolio {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.link_portifolio:hover {
-    filter: opacity(70%);
+    .subtitulo_sobre {
+        flex-direction: column;
+        align-items: baseline;
+    }
 }
