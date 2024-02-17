@@ -349,6 +349,7 @@ body {
     .box_formulario_div {
         padding: 10px;
         width: 100%;
+        height: fit-content;
     }
 
     .bt_editar:hover {
@@ -369,5 +370,13 @@ body {
     .subtitulo_sobre {
         flex-direction: column;
         align-items: baseline;
+    }
+
+    .inputs {
+        margin: 5px 0;
+    }
+
+    .bt_adicionar {
+        margin: 5px 0;
     }
 }
