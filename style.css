@@ -1,0 +1,314 @@
+:root {
+    --tamanho-bt-site: 150px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    background-color: #161616;
+}
+
+/*CABECALHO*/
+
+    .titulo_pag {
+        padding: 10px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+    }
+
+    .titulo_pag p {
+        font-size: 16px;
+        margin: 0 0 0 10px;
+        color: rgb(217, 217, 217);
+        font-family: Poppins;
+    }
+
+    .titulo_pag p:hover {
+        cursor: default;
+    }
+
+    .titulo_pag:hover .bt_editar {
+        display: flex;
+    }
+
+    @keyframes loading {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .girando_icone {
+        animation: loading 0.3s linear infinite;
+        width: 20px;
+        height: 20px;
+    }
+
+    .bt_editar {
+        display: none;
+        margin-left: 10px;
+        transition: 0.5s;
+    }
+    
+    .bt_editar img {
+        width: 13px;
+        filter: invert(1);
+    }
+    
+    .bt_editar:hover {
+        cursor: pointer;
+        filter: opacity(70%);
+    }
+
+    .bt_editar:active {
+        filter: brightness(10);
+        transform: rotate(20deg);
+        transition: 0.1s;
+    }
+
+/*CABECALHO FIM*/
+
+/*LISTA*/
+
+    .box_lista {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        max-width: 760px;
+        border: solid 1px #2a2a2a;
+        border-radius: 20px;
+    }
+
+    .box_lista:hover .ancora {
+        filter: opacity(0.4);
+    }
+
+    /*CHECKBOX EDITAR*/
+
+        #checkbox_editar {
+            display: none;
+        }
+
+        #checkbox_editar:checked ~ .item_lista {
+            display: none;
+        }
+
+        #checkbox_editar:checked ~ .bt_excluir {
+            display: flex;
+            opacity: 100%;
+            transition: 0.5s;
+        }
+        
+    /*CHECKBOX EDITAR FIM*/
+
+    /*BOX FORMULARIO*/
+
+        #box_formulario {
+            display: flex;
+            list-style: none;
+        }
+        
+        .box_formulario_div {
+            width: var(--tamanho-bt-site);
+            height: var(--tamanho-bt-site);
+            margin: 20px;
+            padding: 15px;
+            box-sizing: border-box;
+            border: #626262 solid 1px;
+            border-radius: 20px;
+        }
+
+        #novo_botao_form {
+            justify-content: space-between;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        /*ITENS ADICIONADOS*/
+
+            .item_lista {
+                list-style: none;
+            }
+            
+            .ancora {
+                display: block;
+                width: var(--tamanho-bt-site);
+                height: var(--tamanho-bt-site);
+                margin: 20px;
+                border-radius: 20px;
+                box-shadow: 6px 6px 5px 0px #0000004f;
+                transition: 0.3s;
+            }
+
+            #ancora_id:hover {
+                transform: translate(0px,-6px);
+                transition: 0.3s;
+                cursor: pointer;
+                filter: opacity(1);
+            }
+
+            .ancora_imagem {
+                width: var(--tamanho-bt-site);
+                height: var(--tamanho-bt-site);
+                object-fit: cover;
+                border-radius: 20px;
+            }
+
+            .bt_excluir {
+                display: none;
+                width: var(--tamanho-bt-site);
+                height: var(--tamanho-bt-site);
+                margin: 20px;
+                border-radius: 22px;
+                box-shadow: 6px 6px 5px 0px #0000004f;
+                transition: 0.3s;
+                background-size: 100%;
+                border: none;
+            }
+
+            .bt_excluir:active {
+                transform: scale(1.1);
+                transition: 0.3s;
+            }
+            
+            .bt_excluir:hover .icone_lixo_box {
+                border: white solid;
+                box-sizing: border-box;
+                cursor: pointer;
+                backdrop-filter: blur(8px);
+            }
+            
+            .bt_excluir:hover .icone_lixo {
+                display: block;
+            }
+
+            .fundo {
+                border-radius: 20px;
+                width: var(--tamanho-bt-site);
+                height: var(--tamanho-bt-site);
+                object-fit: cover;
+                filter: brightness(0.1);
+                background-color: black;
+            }
+            
+            .icone_lixo_box {
+                position: absolute;
+                width: var(--tamanho-bt-site);
+                height: var(--tamanho-bt-site);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-weight: bold;
+                border-radius: 20px;
+            }
+            
+            .icone_lixo {
+                width: 50px;
+                filter: invert(1);
+                display: none;
+            }
+
+        /*ITENS ADICIONADOS FIM*/
+
+        /*BOTAO FORMULARIO*/
+
+            .inputs {
+                width: 100%;
+                font-size: 12px;
+                background-color: transparent;
+                border: solid #626262 1px;
+                padding: 5px;
+                box-sizing: border-box;
+                border-radius: 10px;
+                color: white;
+            }
+
+            .bt_adicionar {
+                width: 100%;
+                padding: 5px;
+                border-radius: 10px;
+                background-color: transparent;
+                color: white;
+                border: solid 1px white;
+                font-weight: bold;
+            }
+
+            .bt_adicionar:hover {
+                background-color: white;
+                color: #161616;
+                cursor: pointer;
+            }
+
+        /*BOTAO FORMULARIO FIM*/
+
+    /*BOX FORMULARIO FIM*/
+
+/*LISTA FIM*/
+
+@media screen and (max-width: 830px) {
+
+    .box_lista {
+        margin: 0 20px;
+        justify-content: center;
+        max-width: 570px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+
+    body {
+        height: auto;
+    }
+
+    :root {
+        --tamanho-bt-site: 120px;
+    }
+
+    .titulo_pag{
+        width: 100%;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .box_lista {
+        margin: 0;
+        border: none;
+    }
+    
+    .box_formulario_div {
+        padding: 10px;
+    }
+
+    .bt_editar:hover {
+        filter: opacity(100%);
+    }
+
+    .box_lista:hover .ancora {
+        filter: opacity(100%);
+    }
+
+    #ancora_id:active {
+        transform: translate(0px,-6px);
+        transition: 0.3s;
+        cursor: pointer;
+        filter: opacity(1);
+    }
+}

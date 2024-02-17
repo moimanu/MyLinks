@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/icone.ico"/>
+    <title>MyLinks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="titulo_pag">
+        <img class="girando_icone" src="img/icone.ico">
+        <p>MyLinks</p>
+        <label for="checkbox_editar" class="bt_editar"><img src="img/caneta.png"></label>
+    </header>
+    <ul class="box_lista">
+        <input id="checkbox_editar" type="checkbox">
+        <li id="box_formulario">
+            <div class="box_formulario_div">
+                <form id="novo_botao_form">
+                    <input type="url" name="url_imagem" id="url_imagem" class="inputs" placeholder="URL da imagem..." required/>
+                    
+                    <input type="url" name="url_site" id="url_site" class="inputs" placeholder="URL do site..." required/>
+                    
+                    <input type="submit" value="Adicionar" class="bt_adicionar">
+                </form>
+            </div>
+        </li>
+    </ul>
+    <script src="script.js"></script>
+</body>
+</html>
