@@ -5,6 +5,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Poppins;
 }
 
 html {
@@ -34,11 +35,14 @@ body {
         font-size: 16px;
         margin: 0 0 0 10px;
         color: rgb(217, 217, 217);
-        font-family: Poppins;
     }
 
     .titulo_pag p:hover {
         cursor: default;
+    }
+
+    .titulo_pag:hover .info {
+        display: flex;
     }
 
     .titulo_pag:hover .bt_editar {
@@ -60,9 +64,28 @@ body {
         height: 20px;
     }
 
+    .titulo_pag .info {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 18px;
+        height: 18px;
+        border-radius: 40px;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        margin-left: 15px;
+        text-decoration: none;
+    }
+
+    .titulo_pag .info:hover {
+        cursor: pointer;
+        filter: opacity(70%);
+    }
+
     .bt_editar {
         display: none;
-        margin-left: 10px;
+        margin-left: 15px;
         transition: 0.5s;
     }
     
@@ -90,9 +113,12 @@ body {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        max-width: 760px;
+        max-width: 762px;
         border: solid 1px #2a2a2a;
         border-radius: 20px;
+        box-sizing: border-box;
+        color: #c1c1c1;
+        text-align: justify;
     }
 
     .box_lista:hover .ancora {
@@ -223,7 +249,6 @@ body {
             .icone_lixo {
                 width: 50px;
                 filter: invert(1);
-                display: none;
             }
 
         /*ITENS ADICIONADOS FIM*/
@@ -265,10 +290,14 @@ body {
 
 @media screen and (max-width: 830px) {
 
+    :root {
+        --tamanho-bt-site: 120px;
+    }
+
     .box_lista {
         margin: 0 20px;
         justify-content: center;
-        max-width: 570px;
+        max-width: 572px;
     }
 }
 
@@ -277,11 +306,7 @@ body {
     body {
         height: auto;
     }
-
-    :root {
-        --tamanho-bt-site: 120px;
-    }
-
+    
     .titulo_pag{
         width: 100%;
         justify-content: center;
@@ -290,7 +315,7 @@ body {
     }
 
     .box_lista {
-        margin: 0;
+        margin: 20px;
         border: none;
         width: 100%;
     }
@@ -318,4 +343,14 @@ body {
         cursor: pointer;
         filter: opacity(1);
     }
+}
+
+.link_portifolio {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link_portifolio:hover {
+    filter: opacity(70%);
 }
