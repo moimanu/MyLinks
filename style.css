@@ -129,6 +129,10 @@ body {
         text-align: justify;
     }
 
+    #resumo_sobre {
+        margin: 0;
+    }
+
     .box_lista:hover .ancora {
         filter: opacity(0.4);
     }
@@ -215,6 +219,7 @@ body {
                 transition: 0.3s;
                 background-size: 100%;
                 border: none;
+                background-color: transparent;
             }
 
             .bt_excluir:active {
@@ -370,7 +375,7 @@ body {
     }
 
     .box_lista {
-        margin: 20px;
+        margin-top: 20px;
         border: none;
         width: 100%;
     }
