@@ -26,10 +26,6 @@ a, button, label {
     -webkit-tap-highlight-color: transparent;
 }
 
-a:active, button:active, label:active {
-    transform: scale(0.95);
-}
-
 /*CABECALHO*/
 
     .titulo_pag {
