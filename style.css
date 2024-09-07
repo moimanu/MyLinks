@@ -22,6 +22,10 @@ body {
     background-color: #161616;
 }
 
+a, button, label {
+    -webkit-tap-highlight-color: transparent;
+}
+
 /*CABECALHO*/
 
     .titulo_pag {
